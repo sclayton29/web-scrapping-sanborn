@@ -69,9 +69,12 @@ for loc in city_urls:
                         date = item[0].getText()
                         dates.append(date)
 
-                        final_url_element = loc.split('?')[-1]
+                        final_url_element = link.split('?')[-1]
                         city = final_url_element[5:-11]
-                        state = final_url_element[-1:]
+                        print('city:',city)
+                        state = ''.join(final_url_element.split('=')[2:])
+                        print('state:',str(state))
+
                         states.append(state)
                         cities.append(city)
 
